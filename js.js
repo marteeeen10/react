@@ -15,7 +15,7 @@ else{
 //DECLARACION DE FUNCIONES
 function calcular_suma(c){
         if( true ==  isNaN(c)){ //isNAN devuelve un booleano, igual a 1 si No es Numero
-            alert("el formato debe ser numero");
+            alert("el formato debe ser numeeeero");
             exit;
         }
         else{
