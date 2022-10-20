@@ -1,4 +1,4 @@
-let cant_monedas = parseInt( prompt("Ingrese la cantidad de diferentes tipos de monedas a vender"));
+/* let cant_monedas = parseInt( prompt("Ingrese la cantidad de diferentes tipos de monedas a vender"));
 let total = calcular_suma(cant_monedas);
 let beneficio = prompt("se aplica alguna mejora a la tasacion por la cantidad de dinero si o no?");
 
@@ -12,7 +12,7 @@ else{
     alert("Ingreso incorrecto, vuelva a empezar");
     exit;
 }
-//DECLARACION DE FUNCIONES
+
 function calcular_suma(c){
         if( true ==  isNaN(c)){ //isNAN devuelve un booleano, igual a 1 si No es Numero
             alert("el formato debe ser numeeeero");
@@ -36,5 +36,4 @@ function calcular_beneficio(d){
     let d_con_beneficio = d*(1+beneficio/100);
     return d_con_beneficio;
 }
-
-
+ */
