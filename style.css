@@ -1,4 +1,35 @@
 body {
-    background-color: lightblue;
+    background-color: blue;
 }
 
+img {
+    height: 100%;
+}
+
+td {
+    height: 100px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+.precio {
+    display: block;
+    font-size: 20px;
+}
+
+#carrito {
+    width: 30%;
+    background-color: black;
+    height: 100vh;
+}
+
+#listaProductos {
+    width: 70%;
+}
+
+#contenedorPadre {
+    display: flex;
+}

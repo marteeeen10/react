@@ -1,13 +1,64 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>La Rosadita</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Rosadita</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h1>Casa de Cambio</h1>
-    <script src="segunda_entrega.js"></script>
+<!--   <button id="mostrar_carrito">Carrito</button> -->
+  <div id="contenedorPadre">
+    <div class="container" id="listaProductos">
+      <h2>Casa de Cambio</h2>
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 90%;">
+            <img src="../JS Entrega/img/dolar-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Dolar</h5>
+              <span class="precio">290$</span>
+              <a href="#" class="btn btn-primary botonCompra">Comprar</a>
+              <input type="text" class="form-control" placeholder="Cantidad" aria-label="Cantidad" aria-describedby="basic-addon1">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 90%;">
+            <img src="../JS Entrega/img/Reverso_1_euro.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Euro</h5>
+              <span class="precio">280$</span>
+              <a href="#" class="btn btn-primary botonCompra">Comprar</a>
+              <input type="text" class="form-control" placeholder="Cantidad" aria-label="Cantidad" aria-describedby="basic-addon1">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="carrito">
+      <h2>Carrito</h2>
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <td></td>
+            <td>Moneda</td>
+            <td>Cantidad</td>
+            <td>Tasacion</td>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="tercera_entrega.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 </body>
 </html>
