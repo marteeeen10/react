@@ -1,7 +1,11 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let btn_compra = document.querySelectorAll(".botonCompra");
 console.log(btn_compra);
+let modal_div = document.getElementById("modal-div");
+let clima_div = document.getElementById("clima-div");
 
+let DateTime = luxon.DateTime;
+console.log(DateTime)
 
 for(let boton of btn_compra){
     boton.addEventListener("click" , agregar_a_carrito )
@@ -53,8 +57,35 @@ for( let boton of btn_borrar){
 function borrar_producto(e){
     let abuelo = e.target.parentNode.parentNode;
     abuelo.remove();
+    Toastify({
+        text: "Producto borrado del carrito",
+        duration:1000,
+        gravity: "bottom",
+        position: "right",
+        className: "producto_borrado",
+        style: {
+          background: "linear-gradient(to right, #9b1845, #996e7d)",
+        }
+      }).showToast();
 }
 
 const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
+
+
+//Fetch y clima
+fetch("https://api.openweathermap.org/data/2.5/weather?q=Buenos Aires&lang=es&units=metric&appid=a9e10258cf0e599a2cc1fdf9eaf61083")
+    .then(response => response.json())
+    .then(data => {
+        let d = data.main.temp;
+        console.log(data.main.temp_min)
+        if(d > "22"){
+            clima_div.style.backgroundColor = "red";
+            clima_div.innerHTML = `<h1> Dia caluroso 🌡 </h1>`;
+        } 
+        else{
+            clima_div.style.backgroundColor = "blue";
+            clima_div.innerHTML=  `<h1> Dia fresco ❄ </h1>`;
+        }
+    });
