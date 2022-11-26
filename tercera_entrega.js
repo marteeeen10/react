@@ -58,13 +58,13 @@ function borrar_producto(e){
     let abuelo = e.target.parentNode.parentNode;
     abuelo.remove();
     Toastify({
-        text: "Producto borrado del carrito",
-        duration:1000,
+        text: "Billete eliminado",
+        duration:2000,
         gravity: "bottom",
         position: "right",
         className: "producto_borrado",
         style: {
-          background: "linear-gradient(to right, #9b1845, #996e7d)",
+        background: "black",
         }
       }).showToast();
 }
@@ -81,11 +81,11 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=Buenos Aires&lang=es&un
         let d = data.main.temp;
         console.log(data.main.temp_min)
         if(d > "25"){
-            clima_div.style.backgroundColor = "red";
-            clima_div.innerHTML = `<h1> Dia caluroso 🌡 </h1>`;
+            clima_div.style.backgroundColor = "orange";
+            clima_div.innerHTML = `<h1> Hace Calor</h1>`;
         } 
         else{
-            clima_div.style.backgroundColor = "blue";
-            clima_div.innerHTML=  `<h1> Dia fresco ❄ </h1>`;
+            clima_div.style.backgroundColor = "green";
+            clima_div.innerHTML=  `<h1> Hace frio</h1>`;
         }
     });

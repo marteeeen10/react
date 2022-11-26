@@ -21,9 +21,9 @@ h2 {
 }
 
 #carrito {
-    width: 30%;
+    /* width: 30%; */
     background-color: black;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 #listaProductos {
@@ -40,22 +40,3 @@ h2 {
     display: flex;
     justify-content: space-around;
   }
-
-  .modal-div {
-    width: 80%;
-    margin: 0 10%;
-    max-height: 88vh;
-    color: #fff;
-    background-color: #c88066;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    overflow: auto;
-    top: 80px;
-    scrollbar-color: none;
-  }
-
-  .modal-div::-webkit-scrollbar {
-    display: none;
-  } 
