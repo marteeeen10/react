@@ -80,7 +80,7 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=Buenos Aires&lang=es&un
     .then(data => {
         let d = data.main.temp;
         console.log(data.main.temp_min)
-        if(d > "22"){
+        if(d > "25"){
             clima_div.style.backgroundColor = "red";
             clima_div.innerHTML = `<h1> Dia caluroso 🌡 </h1>`;
         } 
