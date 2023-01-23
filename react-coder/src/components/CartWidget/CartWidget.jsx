@@ -1,9 +1,10 @@
 
 const CartWidget = () => {
     return (
-        <div>
+        <>
             <button className="btn btn-danger">Carro</button>
-        </div>
+            <p>122</p>
+        </>
     );
 }
 
