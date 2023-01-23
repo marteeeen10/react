@@ -14,7 +14,7 @@ const Navbar = () => {
         <Categorias/>
 
       </ul>
-    <CartWidget/>
+    <CartWidget cantCarrito={22}/>
     </div>
 
   </div>
